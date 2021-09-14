@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        .menu {
+            display: inline-block;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .menu li {
+            background: rgb(119, 119, 119);
+        }
+
+        .menu li:hover {
+            background: rgb(32, 32, 32);
+            cursor: pointer;
+        }
+
+        .menu li>a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lists</h1>
+    <h2>Todo list:</h2>
+    <ol>
+        <li>Refactor code</li>
+        <li>Learn new song</li>
+        <li>Take a break</li>
+        <li>Eat some food</li>
+    </ol>
+    <hr>
+    <h2>Shop list:</h2>
+    <ul>
+        <li>Bread</li>
+        <li>Cucumber</li>
+        <li>Water</li>
+    </ul>
+    <hr>
+    <h2>Menu:</h2>
+    <ul class="menu">
+        <li><a href="./images.html">Images</a></li>
+        <li><a href="./tables.html">Tables</a></li>
+        <li><a href="./forms.html">Forms</a></li>
+        <li><a href="../index.html">Main page</a></li>
+    </ul>
+</body>
+</html>

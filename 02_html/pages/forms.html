@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        .form-row {
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <form>
+        <div class="form-row">
+            <label for="firstname">Firstname:</label>
+            <input type="text" name="firstName" id="firstname">
+        </div>
+        <div class="form-row">
+            <input type="text" name="lastName" id="lastname" placeholder="Lastname">
+        </div>
+        <div class="form-row">
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-row">
+            <input type="checkbox" name="checkoptions" id="1" value="Apple"><label for="1">Apple</label>
+            <input type="checkbox" name="checkoptions" id="2" value="Microsoft"><label for="2">Microsoft</label>
+            <input type="checkbox" name="checkoptions" id="3" value="Samsung"><label for="3">Samsung</label>
+        </div>
+        <div class="form-row">
+            <input type="radio" name="sex" id="male" value="male"><label for="male">Male</label>
+            <input type="radio" name="sex" id="female" value="female"><label for="female">Female</label>
+        </div>
+        <div class="form-row">
+            <button>Submit form</button>
+        </div>
+    </form>
+    <a href="../index.html">Go back</a>
+</body>
+</html>
