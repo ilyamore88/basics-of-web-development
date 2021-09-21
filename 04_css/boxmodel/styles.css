@@ -10,10 +10,10 @@
     margin: 5px;
 
     /* Default value */
-    box-sizing: content-box;
+    /*box-sizing: content-box;*/
 
     /* Border box */
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 .parent {
@@ -29,5 +29,14 @@
     background: gray;
     border: 10px solid red;
 
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
+}
+
+.button {
+    /*text-align: center;*/
+    padding: 10px 15px;
+    /*width: 100px;*/
+    /*height: 50px;*/
+    display: inline-block;
+    background: red;
 }
