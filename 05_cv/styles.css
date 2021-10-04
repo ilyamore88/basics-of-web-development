@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    min-height: 100vh;
+    background: url("./images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+}
+
+.container {
+    background: red;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-aside {
+    width: 200px;
+    background: greenyellow;
+    color: gray;
+}
+
+.content {
+    flex: 2;
+    background: white;
+}
+
+.photo {
+    width: 100%;
+    height: 150px;
+    background: pink;
+}
+
+.info {
+    width: 100%;
+    padding: 10px 10px 20px;
+}
+
+.info__title {
+    text-transform: uppercase;
+}
+
+.info__about {
+
+}
+
+.contacts {
+    list-style: none;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.contacts__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.contacts__item-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delimiter {
+    border: none;
+    height: 2px;
+    background: gray;
+}
+
+.progress {
+    height: 4px;
+    background: #000;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.progress::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    background: white;
+    position: absolute;
+}
+
+.progress.p20::before {
+    width: 20%;
+}
+
+.progress.p50::before {
+    width: 50%;
+}
+
+.progress.p80::before {
+    width: 80%;
+}
+
+.timeline {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.timeline__item {
+    position: relative;
+}
+
+.timeline__item::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    background: green;
+    position: absolute;
+    height: 10px;
+    top: 0;
+    left: -10px;
+    transform: translateX(-50%);
+}
+
+.timeline__item:first-child::before {
+    display: none;
+}
+
+.timeline__item:last-child::after {
+    display: none;
+}
+
+.timeline__item::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    background: green;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: -10px;
+    transform: translateX(-50%);
+}
+
+.timeline--red-line .timeline__item::before,
+.timeline--red-line .timeline__item::after {
+    background: red;
+}
+
+.timeline--red-line .timeline__title::before {
+    border-color: red;
+}
+
+.timeline__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.timeline__title--big {
+    font-size: 30px;
+}
+
+.timeline__title::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border: 1px solid green;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
