@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .blue {
+            background: #0074d9;
+        }
+
+        .red {
+            background: #ff253a;
+        }
+    </style>
+</head>
+<body>
+<div class="box blue">123</div>
+<button id="btn">Click me!</button>
+
+<script>
+  const button = document.getElementById('btn');
+  console.log(button);
+  button.addEventListener('click', () => {
+      const box = document.getElementsByClassName('box')[0];
+      box.classList.toggle('blue');
+      box.classList.toggle('red');
+  })
+  // document.addEventListener('copy', (event) => {
+  //     console.log(event);
+  // })
+</script>
+</body>
+</html>

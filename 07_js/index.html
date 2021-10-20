@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button id="btn">Flip card</button>
+<div class="card js-card">
+    <div class="card__wrapper">
+        <div class="card__side is-active">
+            <h1>FRONT</h1>
+        </div>
+        <div class="card__side card__side--back">
+            <h1>BACK</h1>
+        </div>
+    </div>
+</div>
+
+<script>
+    let cardTransitionTime = 500;
+    let switching = false;
+
+    const button = document.getElementById('btn');
+    button.addEventListener('click', flipCard);
+
+    function flipCard() {
+        if (switching) {
+            return false
+        }
+        switching = true
+
+        const card = document.getElementsByClassName('js-card')[0];
+        card.classList.toggle('is-switched');
+        window.setTimeout(function () {
+            card.firstElementChild.firstElementChild.classList.toggle('is-active');
+            card.firstElementChild.lastElementChild.classList.toggle('is-active');
+            switching = false
+        }, cardTransitionTime / 2)
+    }
+</script>
+</body>
+</html>
